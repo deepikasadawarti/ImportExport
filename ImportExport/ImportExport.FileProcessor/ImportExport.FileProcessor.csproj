@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GemBox.Spreadsheet" Version="45.0.0.1043" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ImportExport.DB\ImportExport.DB.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="GemBox.Spreadsheet">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\GemBox Software\GemBox.Spreadsheet 4.5\Bin\net35\GemBox.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="GemBox.Spreadsheet.WinFormsUtilities">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\GemBox Software\GemBox.Spreadsheet 4.5\Bin\net35\GemBox.Spreadsheet.WinFormsUtilities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
